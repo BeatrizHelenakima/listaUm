@@ -1,6 +1,6 @@
+package erena;
 
 public class Serena {
-  
   public String nome;
   public int idade;
   public String sexo;
@@ -8,15 +8,13 @@ public class Serena {
   public String raca;
   public String cor;
   public String ocupacao;
-  public String tipoCauda;
-  public String corCauda;
-  public String tipoCabelo;
-  public String corCabelo;
+  private Cabelo  e ;
+  private Calda  c ;
+  private Acessorios a;
   public String escala;
 
   public Serena(String novoNome, int novaIdade, String novoSexo, String novoGenero, String novaRaca, String novaCor,
-      String novaOcupacao, String novoTipoCauda, String novaCorCauda, String novoTipoCabelo, String novaCorCabelo,
-      String novaEscala) {
+      String novaOcupacao,  Cabelo cabelo, Calda calda, Acessorios acessorios, String novaEscala) {
     this.nome = novoNome;
     this.idade = novaIdade;
     this.sexo = novoSexo;
@@ -24,12 +22,22 @@ public class Serena {
     this.raca = novaRaca;
     this.cor = novaCor;
     this.ocupacao = novaOcupacao;
-    this.tipoCauda = novoTipoCauda;
-    this.corCauda = novaCorCauda;
-    this.tipoCabelo = novoTipoCabelo;
+    this.e = Cabelo;
+    this.c = Calda;
+    this.a = Acessorios;
     this.escala = novaEscala;
-    this.corCabelo = novaCorCabelo;
   }
+    public void setCabelo (Cabelo cabelo) {
+        this.e = cabelo;
+    }
+    
+    public void setCalda (Calda calda) {
+    	this.c = calda;
+    }
+
+  public void setAcessorios (Acessorios acessorios) {
+    	this.a = acessorios;
+    }
   
   public String dialogar(boolean perguntaUm, boolean perguntaDois) {
     if (perguntaUm == true) {
@@ -48,8 +56,9 @@ public class Serena {
   public String toString() {
     return "O meu nome é: " + this.nome + "\nTenho: " + this.idade + " anos" + "\nDa escala: " + this.escala
         + "\nSou do sexo: " + this.sexo + "\nMeu genero é: " + this.genero + " \nda raça: " + this.raca + "\nsou: "
-        + this.ocupacao + "\nMinha cauda é: " + this.tipoCauda + "\nDa cor: " + this.corCauda + "\nMeu cabelo é"
-        + this.corCabelo + " e " + this.tipoCabelo + ".";
+        + this.ocupacao + " neu cabelo é  " + + e.toString() + "\n Calda" + c.toString()+ a.toString() + ".";
   }
 
 }
+
+
